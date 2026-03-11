@@ -12,14 +12,14 @@
 
 <body>
 
-<header>
-<h1>Team 05 - Hairless Hare Membership Application</h1>
-<h3>Third Party Consultants for TapWyse Integration</h3>
-</header>
-
 <main>
 
-<section class="card">
+<section class="card title-card fade-in">
+<h1>Team 05 - Hairless Hare Membership Application</h1>
+<h3>Third Party Consultants for TapWyse Integration</h3>
+</section>
+
+<section class="card fade-in">
 <h2>Client Overview</h2>
 <p>
 Hairless Hare Brewery is a local craft brewery recognized for its community focused atmosphere and diverse selection of handcrafted beers. 
@@ -28,7 +28,7 @@ One of their goals was to implement a membership based rewards program to enhanc
 </p>
 </section>
 
-<section class="card">
+<section class="card fade-in">
 <h2>Project Overview</h2>
 <p>
 The goal of this project was to research and design a custom membership application that could support Hairless Hare Brewery’s loyalty and rewards program. 
@@ -36,14 +36,14 @@ Our team explored the functionality of TapWyse and its potential integration wit
 </p>
 </section>
 
-<section class="card">
+<section class="card fade-in">
 <h2>Research and Development</h2>
 <p>
 During the development phase, our team evaluated multiple potential approaches for implementing a membership system. This included researching TapWyse’s platform capabilities, exploring how membership rewards could be structured, and identifying possible integration points with the brewery’s POS system.
 </p>
 </section>
 
-<section class="card">
+<section class="card fade-in">
 
 <h2>Meet the Team</h2>
 
@@ -75,6 +75,24 @@ During the development phase, our team evaluated multiple potential approaches f
 </section>
 
 </main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add("visible");
+}
+});
+}, { threshold: 0.2 });
+
+document.querySelectorAll(".fade-in, .team-member").forEach(el => {
+observer.observe(el);
+});
+
+});
+</script>
 
 </body>
 </html>
