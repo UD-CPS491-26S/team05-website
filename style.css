@@ -18,13 +18,23 @@ background-blend-mode:darken;
 }
 
 
-
 header{
 background-color:#730000;
 color:white;
 padding:40px 20px;
 text-align:center;
 box-shadow:0 4px 12px rgba(0,0,0,.3);
+
+opacity:0;
+transform:translateY(-20px);
+animation:headerFade 1s ease forwards;
+}
+
+@keyframes headerFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header h1{
@@ -73,7 +83,6 @@ line-height:1.6;
 }
 
 
-
 .team-container{
 display:flex;
 justify-content:center;
@@ -94,14 +103,21 @@ border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,.15);
 
 transition:all .3s ease;
+
+/* fade-in initial state */
+opacity:0;
+transform:translateY(25px);
+}
+
+.team-member.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 .team-member:hover{
 transform:translateY(-8px) scale(1.02);
 box-shadow:0 12px 30px rgba(0,0,0,.3);
 }
-
-
 
 .team-member img{
 width:170px;
@@ -117,8 +133,6 @@ transition:all .3s ease;
 .team-member:hover img{
 transform:scale(1.08);
 }
-
-
 
 .team-member a{
 display:inline-block;
@@ -143,3 +157,14 @@ transform:scale(1.05);
 }
 
 
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
