@@ -5,7 +5,7 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Poppins', sans-serif;
+font-family:'Poppins',sans-serif;
 
 background-image:url("assets/MugClub.jpg");
 background-position:center;
@@ -13,19 +13,17 @@ background-repeat:no-repeat;
 background-size:cover;
 background-attachment:fixed;
 
-
 background-color:rgba(0,0,0,0.45);
 background-blend-mode:darken;
 }
 
 
-
 header{
 background-color:#730000;
 color:white;
-padding:30px 0;
+padding:40px 20px;
 text-align:center;
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
+box-shadow:0 4px 12px rgba(0,0,0,.3);
 }
 
 header h1{
@@ -49,8 +47,10 @@ padding:0 20px;
 
 
 .card{
+
 background:rgba(255,255,255,0.92);
 border-radius:10px;
+
 padding:25px;
 margin-bottom:30px;
 
@@ -59,10 +59,10 @@ box-shadow:0 8px 25px rgba(0,0,0,.25);
 transition:all .3s ease;
 }
 
-
-
 .card:hover{
+
 transform:translateY(-6px);
+
 box-shadow:0 12px 35px rgba(0,0,0,.35);
 }
 
@@ -78,6 +78,7 @@ line-height:1.6;
 
 
 .team-container{
+
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
@@ -86,11 +87,13 @@ margin-top:20px;
 }
 
 .team-member{
+
 flex:1 1 220px;
 max-width:240px;
 
 background:white;
 padding:20px;
+
 border-radius:10px;
 
 box-shadow:0 5px 15px rgba(0,0,0,.15);
@@ -99,15 +102,19 @@ transition:all .3s ease;
 }
 
 .team-member:hover{
+
 transform:translateY(-8px) scale(1.02);
+
 box-shadow:0 12px 30px rgba(0,0,0,.3);
 }
 
 
 
 .team-member img{
+
 width:170px;
 height:170px;
+
 border-radius:50%;
 object-fit:cover;
 
@@ -117,12 +124,14 @@ transition:all .3s ease;
 }
 
 .team-member:hover img{
+
 transform:scale(1.08);
 }
 
 
 
 .team-member a{
+
 display:inline-block;
 margin-top:10px;
 
@@ -132,6 +141,7 @@ background:#730000;
 color:white;
 
 text-decoration:none;
+
 border-radius:20px;
 
 font-size:14px;
@@ -140,7 +150,9 @@ transition:all .25s ease;
 }
 
 .team-member a:hover{
+
 background:#a80000;
+
 transform:scale(1.05);
 }
 
@@ -149,8 +161,26 @@ transform:scale(1.05);
 @media(max-width:700px){
 
 .team-container{
+
 flex-direction:column;
 align-items:center;
 }
 
+}
+
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:all .8s ease;
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
 }
