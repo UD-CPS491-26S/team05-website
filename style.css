@@ -4,10 +4,6 @@ padding:0;
 box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body{
 font-family:'Poppins',sans-serif;
 
@@ -21,25 +17,12 @@ background-color:rgba(0,0,0,0.45);
 background-blend-mode:darken;
 }
 
-
-
 header{
 background-color:#730000;
 color:white;
 padding:40px 20px;
 text-align:center;
 box-shadow:0 4px 12px rgba(0,0,0,.3);
-
-opacity:0;
-transform:translateY(-20px);
-animation:headerFade 1s ease forwards;
-}
-
-@keyframes headerFade {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 header h1{
@@ -52,26 +35,17 @@ font-weight:300;
 opacity:.9;
 }
 
-
-
 main{
 max-width:900px;
-margin:0 auto;
+margin:50px auto;
 padding:0 20px;
 }
-
-
 
 .card{
 background:rgba(255,255,255,0.92);
 border-radius:10px;
-padding:120px 25px; 
-margin-bottom:0;
-
-min-height:100vh; 
-display:flex;
-flex-direction:column;
-justify-content:center;
+padding:25px;
+margin-bottom:30px;
 
 box-shadow:0 8px 25px rgba(0,0,0,.25);
 
@@ -91,7 +65,6 @@ color:#730000;
 .card p{
 line-height:1.6;
 }
-
 
 .team-container{
 display:flex;
@@ -113,15 +86,6 @@ border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,.15);
 
 transition:all .3s ease;
-
-
-opacity:0;
-transform:translateY(25px);
-}
-
-.team-member.visible{
-opacity:1;
-transform:translateY(0);
 }
 
 .team-member:hover{
@@ -164,17 +128,4 @@ transition:all .25s ease;
 .team-member a:hover{
 background:#a80000;
 transform:scale(1.05);
-}
-
-
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
 }

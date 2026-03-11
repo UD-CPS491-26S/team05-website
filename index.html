@@ -76,23 +76,5 @@ During the development phase, our team evaluated multiple potential approaches f
 
 </main>
 
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll(".card, .team-member").forEach(el => {
-        el.classList.add("fade-in");
-        observer.observe(el);
-    });
-});
-</script>
-
 </body>
 </html>
