@@ -7,10 +7,12 @@
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f8;
-    color: #333;
-    line-height: 1.6;
+    background-image: url("assets/MugClub.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-color: #ffffff;
 }
 
 
