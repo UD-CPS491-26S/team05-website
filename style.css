@@ -36,7 +36,7 @@ background:rgba(255,255,255,0.92);
 border-radius:10px;
 padding:120px 40px;
 
-min-height:100vh;
+height:auto;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -171,4 +171,16 @@ transition:opacity .8s ease, transform .8s ease;
 .fade-in.visible{
 opacity:1;
 transform:translateY(0);
+}
+
+.card ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.5rem;
+}
+
+.card ul {
+  text-align: left;
+  margin: 0.5rem auto 0 auto;
+  padding-left: 1.5rem;
+  max-width: 750px;
 }
